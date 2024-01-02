@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      .all {
+    background: linear-gradient(45deg, rgb(207, 82, 90), rgb(230, 241, 77));
+    width: 200px;
+    height: 220px;
+    overflow-x: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.all {
+    display: flex;
+    overflow-x: auto;
+    border-radius: 0px;
+    /* scroll-behavior: smooth; */
+}
+
+.all::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.one>div {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    background-color: white;
+    transform-origin: center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.one>div :target {
+    transform: scale(0.9);
+}
+
+.one>a {
+    display: inline-flex;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgb(0, 0, 0);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    top: 200px;
+}
+
+.one>a :focus {
+    background: #000;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pre {
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    z-index: 10;
+}
+
+.next {
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    z-index: 10;
+}
+</style>
+<body>
+    <div class="all">
+        <div class="one"> </div>
+        <a href="b"></a>
+        <a href="c"></a>
+        <a href="d"></a>
+        <a href="h"></a>
+        <div>
+            <a class="btn pre" style="text-decoration: none;" href=""> &lt; </a>
+        </div>
+        <div>
+            <a class="btn next" style="text-decoration: none;" href=""> &gt; </a>
+        </div>
+        <div class="one">
+            <div class="b" id="b-1">1</div>
+            <div class="c" id="c-2">2</div>
+            <div class="d" id="d-3">3</div>
+            <div class="h" id="h-4">4</div>
+        </div>
+    </div>
+</body>
+</html>

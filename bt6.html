@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        transition: all 1s ease-in-out;
+    }
+
+    i:active+ul {
+        transform: translateX(-90px);
+    }
+</style>
+<body>
+    <i class="fa-solid fa-bars"></i>
+    <ul style="background-color: blue;width: 100px;">
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+    </ul>
+</body>
+</html>
